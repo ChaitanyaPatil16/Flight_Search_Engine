@@ -1,0 +1,185 @@
+[
+   {
+    "Origin_Destination" : "Pune-Delhi",
+    "Flight_Name" : "Indigo",
+    "Departure" : "1 pm",
+    "Arrival" : "2:30 pm",
+    "Fare" : "5000"
+   },
+   {
+    "Origin_Destination" : "Pune-Delhi",
+    "Flight_Name" : "SpiceJet",
+    "Departure" : "2 pm",
+    "Arrival" : "3:30 pm",
+    "Fare" : "13000"
+   },
+   {
+    "Origin_Destination" : "Pune-Mumbai",
+    "Flight_Name" : "KingFisher",
+    "Departure" : "3 pm",
+    "Arrival" : "4:30 pm",
+    "Fare" : "17000"
+   },
+   {
+    "Origin_Destination" : "Pune-Mumbai",
+    "Flight_Name" : "AirIndia",
+    "Departure" : "4 pm",
+    "Arrival" : "5:30 pm",
+    "Fare" : "23000"
+   },
+   {
+    "Origin_Destination" : "Pune-Nagpur",
+    "Flight_Name" : "GoAir",
+    "Departure" : "5 pm",
+    "Arrival" : "6:30 pm",
+    "Fare" : "19000"
+   },
+   {
+    "Origin_Destination" : "Pune-Nagpur",
+    "Flight_Name" : "Indigo",
+    "Departure" : "6 pm",
+    "Arrival" : "7:30 pm",
+    "Fare" : "11000"
+   },
+   {
+    "Origin_Destination" : "Nagpur-Delhi",
+    "Flight_Name" : "SpiceJet",
+    "Departure" : "7 pm",
+    "Arrival" : "8:30 pm",
+    "Fare" : "7000"
+   },
+   {
+    "Origin_Destination" : "Nagpur-Delhi",
+    "Flight_Name" : "KingFisher",
+    "Departure" : "8 pm",
+    "Arrival" : "9:30 pm",
+    "Fare" : "9000"
+   },
+   {
+    "Origin_Destination" : "Nagpur-Pune",
+    "Flight_Name" : "AirIndia",
+    "Departure" : "9 pm",
+    "Arrival" : "10:30 pm",
+    "Fare" : "3000"
+   },
+   {
+    "Origin_Destination" : "Nagpur-Pune",
+    "Flight_Name" : "GoAir",
+    "Departure" : "10 pm",
+    "Arrival" : "11:30 pm",
+    "Fare" : "6000"
+   },
+   {
+    "Origin_Destination" : "Nagpur-Mumbai",
+    "Flight_Name" : "Indigo",
+    "Departure" : "11 pm",
+    "Arrival" : "12:30 pm",
+    "Fare" : "9000"
+   },
+   {
+    "Origin_Destination" : "Nagpur-Mumbai",
+    "Flight_Name" : "SpiceJet",
+    "Departure" : "4 am",
+    "Arrival" : "5:30 am",
+    "Fare" : "30000"
+   },
+   {
+    "Origin_Destination" : "Mumbai-Delhi",
+    "Flight_Name" : "KingFisher",
+    "Departure" : "4 am",
+    "Arrival" : "5:30 am",
+    "Fare" : "27000"
+   },
+   {
+    "Origin_Destination" : "Mumbai-Delhi",
+    "Flight_Name" : "AirIndia",
+    "Departure" : "5 am",
+    "Arrival" : "6:30 am",
+    "Fare" : "40000"
+   },
+   {
+    "Origin_Destination" : "Mumbai-Pune",
+    "Flight_Name" : "GoAir",
+    "Departure" : "6 am",
+    "Arrival" : "7:30 am",
+    "Fare" : "23000"
+   },
+   {
+    "Origin_Destination" : "Mumbai-Pune",
+    "Flight_Name" : "Indigo",
+    "Departure" : "7 am",
+    "Arrival" : "8:30 am",
+    "Fare" : "25000"
+   },
+   {
+    "Origin_Destination" : "Mumbai-Nagpur",
+    "Flight_Name" : "SpiceJet",
+    "Departure" : "8 am",
+    "Arrival" : "9:30 am",
+    "Fare" : "22000"
+   },
+   {
+    "Origin_Destination" : "Mumbai-Nagpur",
+    "Flight_Name" : "KingFisher",
+    "Departure" : "9 am",
+    "Arrival" : "10:30 am",
+    "Fare" : "14000"
+   },
+   {
+    "Origin_Destination" : "Delhi-Pune",
+    "Flight_Name" : "AirIndia",
+    "Departure" : "10 am",
+    "Arrival" : "11:30 am",
+    "Fare" : "17000"
+   },
+   {
+    "Origin_Destination" : "Delhi-Pune",
+    "Flight_Name" : "GoAir",
+    "Departure" : "11 am",
+    "Arrival" : "12:30 pm",
+    "Fare" : "29000"
+   },
+   {
+    "Origin_Destination" : "Delhi-Nagpur",
+    "Flight_Name" : "Indigo",
+    "Departure" : "12 pm",
+    "Arrival" : "1:30 pm",
+    "Fare" : "24000"
+   },
+   {
+    "Origin_Destination" : "Delhi-Nagpur",
+    "Flight_Name" : "SpiceJet",
+    "Departure" : "1 pm",
+    "Arrival" : "2:30 pm",
+    "Fare" : "27000"
+   },
+   {
+    "Origin_Destination" : "Delhi-Mumbai",
+    "Flight_Name" : "KingFisher",
+    "Departure" : "2 pm",
+    "Arrival" : "3:30 pm",
+    "Fare" : "9000"
+   },
+   {
+    "Origin_Destination" : "Delhi-Mumbai",
+    "Flight_Name" : "AirIndia",
+    "Departure" : "3 pm",
+    "Arrival" : "4:30 pm",
+    "Fare" : "19000"
+   },
+   {
+    "Origin_Destination" : "Pune-Delhi",
+    "Flight_Name" : "GoAir",
+    "Departure" : "4 pm",
+    "Arrival" : "5:30 pm",
+    "Fare" : "22000"
+   },
+   {
+    "Origin_Destination" : "Pune-Delhi",
+    "Flight_Name" : "Indigo",
+    "Departure" : "5 pm",
+    "Arrival" : "6:30 pm",
+    "Fare" : "25000"
+   }
+
+]

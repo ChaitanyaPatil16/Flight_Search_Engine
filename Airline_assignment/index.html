@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search Engine</title>
+    <style>
+        /* Style the tab */
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+      }
+
+      /* Style the buttons that are used to open the tab content */
+      .tab button {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #ddd;
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #ccc;
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+
+      table, th, td {
+        border: 1px solid black;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+    </style>
+</head>
+<body>
+    <h1>Flight Search Engine</h1>
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'One Way')" id="defaultOpen"><b> One Way </b></button>
+      <button class="tablinks" onclick="openCity(event, 'Return')"><b>Return</b></button>
+      <!-- <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button> -->
+    </div>
+      
+    <!-- Tab content -->
+    <div id="One Way" class="tabcontent">
+      <h3>One Way</h3>
+      <form>
+        <label >Select Cities: </label><br>
+          <select name="owflights" id="owflights" onchange="searchFun()" class="">
+            <option value="Pune-Delhi">Pune-Delhi</option>
+            <option value="Pune-Mumbai">Pune-Mumbai</option>
+            <option value="Pune-Nagpur">Pune-Nagpur</option>
+            <option value="Nagpur-Delhi">Nagpur-Delhi</option>
+            <option value="Nagpur-Pune">Nagpur-Pune</option>
+            <option value="Nagpur-Mumbai">Nagpur-Mumbai</option>
+            <option value="Mumbai-Delhi">Mumbai-Delhi</option>
+            <option value="Mumbai-Pune">Mumbai-Pune</option>
+            <option value="Mumbai-Nagpur">Mumbai-Nagpur</option>
+            <option value="Delhi-Pune">Delhi-Pune</option>
+            <option value="Delhi-Nagpur">Delhi-Nagpur</option>
+            <option value="Delhi-Mumbai">Delhi-Mumbai</option>
+          </select><br>
+          
+          <label>Departure Date:</label><br>
+          <input type="date" required><br>
+          <label >Return Date:</label><br>
+          <input type="date" id="owrdate" name="owrdate" required><br>
+          <label >Number of Passengers:</label><br>
+          <input type="number" min="1" max="5" required><br><br>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          </div><br><br>
+        </form>
+      </div>
+      <div id="Return" class="tabcontent">
+        <h3>Return</h3>
+        <form>
+          <label for="fname">Select Cities: </label><br>
+          <select name="rflights" id="rflights" onchange="searchFunR()" class="">
+            <option value="Pune-Delhi">Pune-Delhi</option>
+            <option value="Pune-Mumbai">Pune-Mumbai</option>
+            <option value="Pune-Nagpur">Pune-Nagpur</option>
+            <option value="Nagpur-Delhi">Nagpur-Delhi</option>
+            <option value="Nagpur-Pune">Nagpur-Pune</option>
+            <option value="Nagpur-Mumbai">Nagpur-Mumbai</option>
+            <option value="Mumbai-Delhi">Mumbai-Delhi</option>
+            <option value="Mumbai-Pune">Mumbai-Pune</option>
+            <option value="Mumbai-Nagpur">Mumbai-Nagpur</option>
+            <option value="Delhi-Pune">Delhi-Pune</option>
+            <option value="Delhi-Nagpur">Delhi-Nagpur</option>
+            <option value="Delhi-Mumbai">Delhi-Mumbai</option>
+          </select><br>
+            <label for="lname">Departure Date</label><br>
+            <input type="date" id="rddate" name="rddate" required><br>
+            <label for="lname">Return Date</label><br>
+            <input type="date" id="rrdate" name="rrdate" required><br>
+            <label for="quantity">Number of Passengers</label><br>
+            <input type="number" id="rpnumber" name="rpnumber" min="1" max="5" required><br><br>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div><br><br>
+          </form>
+      </div>
+      
+      <br>
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      </div> -->
+
+      <table style="width:50%" id="myTable">
+        <thead>
+          <tr>
+          <th>Origin-Destination</th>
+          <th>Flight Name</th>
+          <th>Departure</th>
+          <th>Arrival</th>
+          <th>Fare</th>
+          <th>Book Now</th>
+          </tr>
+        </thead>
+        <tbody id="data-output">
+
+        </tbody>
+      </table>
+      <script src="script.js"></script>
+</body>
+<script>
+    function openCity(evt, tripWay) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tripWay).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
+</script>
+<script>
+
+  const searchFun = () =>{
+    let filter = document.getElementById('owflights').value.toUpperCase();
+
+    let myTable = document.getElementById('myTable');
+
+    let tr = myTable.getElementsByTagName('tr');
+
+    for(var i=0; i<tr.length; i++){
+      
+      let td = tr[i].getElementsByTagName('td')[0];
+
+      if(td){
+        let textvalue = td.textContent || td.innerHTML;
+
+        if(textvalue.toUpperCase().indexOf(filter) > -1){
+          tr[i].style.display = "";
+        }else{
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  const searchFunR = () =>{
+    let filter = document.getElementById('rflights').value.toUpperCase();
+
+    let myTable = document.getElementById('myTable');
+
+    let tr = myTable.getElementsByTagName('tr');
+
+    for(var i=0; i<tr.length; i++){
+      
+      let td = tr[i].getElementsByTagName('td')[0];
+
+      if(td){
+        let textvalue = td.textContent || td.innerHTML;
+
+        if(textvalue.toUpperCase().indexOf(filter) > -1){
+          tr[i].style.display = "";
+        }else{
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+  
+
+</script>
+</html>
